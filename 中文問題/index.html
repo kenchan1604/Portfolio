@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="〈背影〉課文問答">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>〈背影〉課文問答</title>
+        <script type="text/javascript">
+            var kcans=0;
+            var playername="";
+            function check_select()
+            {
+                switch(kcans) {
+                case 0:
+                    if(pwtext.value == ""){
+                        document.getElementById("showtext").innerHTML="未輸入你的名字";
+                    }else{
+                    playername=pwtext.value;
+                    kcans=1;
+                    document.getElementById("asnbox").innerHTML="<input type=\"text\" id=\"pwtext\" name=\"pwtext\"><div id=\"showtext\"></div><br><button onclick=\"select_A()\">A</button><button onclick=\"select_B()\">B</button><button onclick=\"select_C()\">C</button><button onclick=\"select_D()\">D</button>";
+                    document.getElementById("questionbox").innerHTML="這篇文章屬於哪種文體?<br>";
+                    document.getElementById("ansbox").innerHTML="(A)小說<br>(B)散文<br>(C)新詩<br>(D)近體詩";
+                    }
+                    break;
+                case 1:
+                    if(pwtext.value == "")
+                    {
+                        document.getElementById("showtext").innerHTML="未輸入";
+                    }else if(pwtext.value == "B"){
+                        document.getElementById("showtext").innerHTML="恭喜你答對了!";
+                        kcans=2;
+                        pwtext.value="";
+                        document.getElementById("questionbox").innerHTML="這篇文章主旨在敘述什麼?<br>";
+                    document.getElementById("ansbox").innerHTML="(A)對父親的思念<br>(B)對父親身材的描述<br>(C)父親買橘子的事<br>";
+                    }else{
+                        //alert("輸入錯誤");
+                        document.getElementById("showtext").innerHTML="答錯了,再來一次";
+                    }
+                    break;
+                case 2:
+                    if(pwtext.value == "")
+                    {
+                        document.getElementById("showtext").innerHTML="未輸入";
+                    }else if(pwtext.value == "A"){
+                        document.getElementById("showtext").innerHTML="恭喜你答對了!";
+                        document.getElementById("asnbox").innerHTML="<input type=\"text\" id=\"pwtext\" name=\"pwtext\"><div id=\"showtext\"></div><br><button onclick=\"select_A()\">A</button><button onclick=\"select_B()\">B</button><button onclick=\"select_C()\">C</button><button onclick=\"select_D()\">D</button>";
+                        kcans=3;
+                        pwtext.value="";
+                        document.getElementById("questionbox").innerHTML="朱自清在〈背影〉一文中寫到：「我北來後，他寫了一封信給我，信中說道:『我身體平安，惟膀子疼痛得厲害，舉箸提筆，諸多不便，大約大去之期不遠矣。』我讀到此處，在晶瑩的淚光中，又看見那肥胖的青布棉袍、黑布馬褂的背影。」下列何者是這段文字真正想傳達的訊息？<br>";
+                    document.getElementById("ansbox").innerHTML="(A)父親雖身體平安，卻故意說大去之期不遠，更見對兒子的思念<br>(B)無論父親身體狀況好壞，每想起父親當時的背影，朱自清總是忍不住落淚<br>(C)父親長年穿著青布棉袍、黑布馬褂，卻不忍在信中提及家中經濟境況讓兒子擔心<br>(D)父親當年送行的背影，已深深成為朱自清傳遞愛與思念的永恆形象";
+                    }else{
+                        //alert("輸入錯誤");
+                        document.getElementById("showtext").innerHTML="答錯了,再來一次";
+                    }
+                    break;
+                case 3:
+                    if(pwtext.value == "")
+                    {
+                        document.getElementById("showtext").innerHTML="未輸入";
+                    }else if(pwtext.value == "D"){
+                        document.getElementById("asnbox").innerHTML="<div id=\"showtext\">";
+                        document.getElementById("showtext").innerHTML="恭喜"+playername+",你全部答對了!";
+                        kcans=4;
+                        document.getElementById("questionbox").innerHTML="";
+                        document.getElementById("ansbox").innerHTML="";
+                    }else{
+                        //alert("輸入錯誤");
+                        document.getElementById("showtext").innerHTML="答錯了,再來一次";
+                    }
+                    break;
+                default:
+                    document.getElementById("showtext").innerHTML="出錯";
+                }
+            }
+            function select_A(){
+                    pwtext.value="A";
+                    check_select();
+            }
+            function select_B(){
+                    pwtext.value="B";
+                    check_select();
+            }
+            function select_C(){
+                    pwtext.value="C";
+                    check_select();
+            }
+            function select_D(){
+                    pwtext.value="D";
+                    check_select();
+            }
+        </script>
+        <script>
+            function myFunction() {
+                document.location.href= "redgame2.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <div class="title">〈背影〉課文問答</div>
+                    <div id="questionbox"></div>
+                    <div id="ansbox"></div>
+                    <div id="asnbox">
+                        請輸入你的名字：<input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button onclick="check_select()">送出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 銘傳大學應用中國文學系 侯羽穜博士<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>
