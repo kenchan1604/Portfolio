@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-紅隊(墓園)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-紅隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "張氏"){
+                    document.getElementById("showtext").innerHTML="「氏之」";
+                    alert("「氏之」");
+                    document.location.href= "redgame4.html";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>寫生完，我們就到廣場的榕樹下休息，突然後面墳墓區有人就問我們要不要幫忙，可以賺一點零用錢，我們當然很快地就答應了！接著掃墓的人就告訴我們：「在地上有葉子的墓附近是林氏的墓，其斜對角王氏附近有一朵花的墓的右邊的那一個墓，就是你們今天要掃的墓了!」<br>
+                    <i class="fa fa-hand-o-right"></i>請依掃墓人的指示找出他們要打掃的墓。</p><br>
+                    <img src="./images/r3.png" alt="r3">
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-紅隊(職務宿舍)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-紅隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "眷村生活好有趣"){
+                    document.getElementById("showtext").innerHTML="「間地」";
+                    alert("「間地」");
+                    document.location.href= "redgame3.html";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>找不到,我的鑰匙到底在哪裏呢?我記得當時好朋友小光正好要去埤塘寫生，還邀請我一起去寫生，我那時心想反正閒著也沒事做，所以就跟她一起去埤塘寫生。</p><br>
+                    <i class="fa fa-hand-o-right"></i>下面那張圖片是我依照看到的事物所畫的圖，請從這個圖找出線索，破解這張藏寶圖的秘密吧！<br>
+                    <i class="fa fa-lightbulb-o"></i>
+                    提示：<br>
+                    1.職務官舍是一個四層磚造混凝土構造建築物，以前這裡原本是一個大埤塘。<br>
+                    2.魚兒通常會順著同一個方向去游。<br>
+                    3.通關密語就在QR碼。
+                    <br><br>
+                    <img src="./images/r2.png" alt="r2">
+                    <br><br>
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-紅隊(白千層)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-紅隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "就是愛憲光"){
+                    document.getElementById("showtext").innerHTML="「氏與劉」";
+                    alert("「氏與劉」");
+                    pwtext.value == "";
+                    document.location.href= "redgame2.html";
+                }else if(pwtext.value == "光愛就憲是"){
+                    document.getElementById("showtext").innerHTML="難道你不可以重組一下答案嗎?";
+                    pwtext.value == "";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>昨天的我，原本是想先回家放完書包後再出來玩的，可是在回家的路上，被一些長得很特別的樹幹吸引住了，那時的我還發現樹幹上有些東西，於是我試著爬上樹想一探究竟，這時看到隔壁的小光路過，我又爬下了樹。</p>
+                    <br>
+                    <i class="fa fa-hand-o-right"></i>請依提示對照出現場的白千層想要對你說什麼？<br>
+                    <i class="fa fa-lightbulb-o"></i>
+                    提示：<br>
+                    1.請背向文化牆面對白千層。<br>
+                    2.每一欄(直排)為一個答案。<br>
+                    <img src="./images/r1.png" alt="白千層猜題">
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

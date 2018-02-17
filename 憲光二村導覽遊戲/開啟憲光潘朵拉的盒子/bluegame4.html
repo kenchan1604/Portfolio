@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-藍隊(71 號雜貨店)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-藍隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "")
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "260"){
+                    document.getElementById("showtext").innerHTML="「籃」";
+                    alert("「籃」");
+                    document.location.href= "bluegame5.html";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>鑰匙的位置我好像有一點印象,但還是有一點模糊。我發現天色已晚，突然想起媽媽交代我要拿糧票去雜貨店換油與米，我趕緊回家去拿放在抽屜裡的糧票，前往雜貨店。
+                    </p><br>
+                    <i class="fa fa-hand-o-right"></i>請幫忙算一算，若王媽媽將整個月全家的糧票都換成了現金，崔媽媽要拿給王媽媽多少錢呢?<br>
+                    <br>
+                    <i class="fa fa-lightbulb-o"></i>
+                    提示：<br>
+                    「中華民國退伍軍人眷屬補給證」，簡稱「眷補証」，根據眷屬人口及年齡補給，一人一份，區分大口(十一歲以上)、中口(六至十歲)、及小口(一至五歲)三種，子女一旦畢業進入社會工作後，就不再補貼。眷補證內頁有當年度的糧票，按月兌換一定數量的米、食用油、麵粉……等生活必需品。
+                    <br><br>
+                    <img src="./images/b4.png" alt="王媽全家照">
+                    <img class="smallimg" src="./images/b4-2.png" alt="糧票">
+                    <img class="smallimg" src="./images/b4-3.png" alt="沙拉油1L">
+                    <img class="smallimg" src="./images/b4-4.png" alt="沙拉油2L">
+                    <img class="smallimg" src="./images/b4-5.png" alt="5公斤米">
+                    <img class="smallimg" src="./images/b4-6.png" alt="10公斤米">
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

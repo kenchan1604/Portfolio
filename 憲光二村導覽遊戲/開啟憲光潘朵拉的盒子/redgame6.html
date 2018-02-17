@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-紅隊">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-紅隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "張氏與劉氏之間地上"){
+                    document.getElementById("showtext").innerHTML="通過";
+                    document.getElementById("s2key").innerHTML="<div id=\"kcakey\"><img src=\"images/key.png\"></div><div class=\"kccenter kcw\"><i class=\"fa fa-sign-language\"></i>謝謝你幫小憲找到鑰匙囉!<i class=\"fa fa-sign-language hf\"></i><br><br><br><div id=\"kcauthor\">腳本設計-銘傳旅遊創新實驗社<br>網頁製作-陳章瑋</div></div>";
+                    alert("謝謝你幫小憲找到鑰匙囉!");
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box2">
+                    <div id="s2key">
+                        <div class="kccenter">
+                            <i class="fa fa-key"></i>鑰匙就在密語中<i class="fa fa-key"></i>
+                        </div>
+                        <div class="asnbox kccenter"><br>
+                            我終於想起鎖匙放在哪裏了<br><br>
+                            請輸入通關密語：<input type="text" id="pwtext" name="pwtext">
+                            <div id="showtext"></div><br>
+                            <button onclick="check_select()">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

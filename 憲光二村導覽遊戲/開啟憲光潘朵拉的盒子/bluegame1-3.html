@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-藍隊(自治會)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-藍隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "繡花枕套"  || pwtext.value == "繡花枕頭套"|| pwtext.value == "繡花套" || pwtext.value == "繡花枕"){
+                    document.getElementById("showtext").innerHTML="「旁的」";
+                    alert("「旁的」");
+                    document.location.href= "bluegame2.html";
+                }else if(pwtext.value == "枕套" || pwtext.value == "枕頭套" || pwtext.value == "花枕頭" || pwtext.value == "繡花"){
+                    document.getElementById("showtext").innerHTML="你的答案很接近了,請你用心聆聽!";
+                }else if(pwtext.value == "{綉花枕套" || pwtext.value == "綉花枕頭套" || pwtext.value == "綉花套"|| pwtext.value == "綉花枕"){
+                    document.getElementById("showtext").innerHTML="呵呵!你有錯別字!";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>為了完成「我最喜愛的人」這篇作文，小憲訪問了村子裡常常帶頭帶他們玩耍的一位媽媽，也間接聽到了她曾答應撤退來台的老公，無論如何都要保管好的「傳家之寶」的故事。</p><br>
+                    <i class="fa fa-hand-o-right"></i>請從故事箱中找到這件寶物<br>
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

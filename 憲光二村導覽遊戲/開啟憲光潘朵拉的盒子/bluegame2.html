@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-藍隊(文化牆「籃球場對面」)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-藍隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "FIBA"){
+                    document.getElementById("showtext").innerHTML="「叢」";
+                    alert("「叢」");
+                    document.location.href= "bluegame3.html";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>找不到,我的鑰匙到底在哪裏呢?我記得當時完成作業後，我就去籃球場和朋友們一起打籃球，結果去草叢撿球時，我不小心被一顆大石頭絆倒，大大摔了一跤，真是丟臉阿! 後來玩累了我就去旁邊休息，我發現16號盧伯伯村長家前，有一張一半的剪報，我撿起來一看，發現它原來是一篇採訪報導！</p><br>
+                    <i class="fa fa-hand-o-right"></i>現在就請試著從村子裡所有的公告欄中，找尋它的另一半吧!,請依照公告欄位置圖找出線索，請填入完整剪報中的所提的比賽英文縮寫。<br><br>
+                    <img src="./images/b2.png" alt="剪報-1">
+                    <img src="./images/b2-2.png" alt="公告欄分布圖">
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>

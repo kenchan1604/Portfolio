@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="開啟憲光潘朵拉的盒子-藍隊(丁媽媽)">
+        <!--<meta NAME="KeyWords" content="關鍵字'關鍵字2'關鍵字3'>-->
+        <meta name="author" content="CCW">
+        <meta name="copyright" content="© KCHKD. All rights reserved.">
+        <link rel="stylesheet" href="css/reset.css"><!-- reset style -->
+        <link rel="stylesheet" href="css/base.css"><!-- base style -->
+        <title>開啟憲光潘朵拉的盒子-藍隊</title>
+        <script type="text/javascript">
+            function check_select()
+            {
+                if(pwtext.value == "") 
+                {
+                    document.getElementById("showtext").innerHTML="未輸入通關密語";
+                }else if(pwtext.value == "麵粉"){
+                    document.getElementById("showtext").innerHTML="「草」";
+                    alert("「草」");
+                    document.location.href= "bluegame6.html";
+                }else if( pwtext.value == "麵團" || pwtext.value == "小麥"){
+                    document.getElementById("showtext").innerHTML="「你的答案很接近了,再猜猜看!」";
+                }else{
+                    //alert("輸入錯誤");
+                    document.getElementById("showtext").innerHTML="輸入錯誤";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="container">
+                <div class="s2box">
+                    <p>正當開心之際突然我的肚子發出咕嚕咕嚕的聲音，原來是我餓了，於是我帶著換來的油跟米前往丁媽媽家吃晚飯，看到香噴噴的菜餚，口水都快流出來了呢!</p><br>
+                    <i class="fa fa-hand-o-right"></i>這麼多美味的菜餚，請問他們的共同點是什麼?<br><br>
+                    <img src="./images/b5.png" alt="b5">
+                    <div class="asnbox">
+                        請輸入通關密語：
+                        <input type="text" id="pwtext" name="pwtext">
+                        <div id="showtext"></div>
+                        <button id="next_btn" onclick="check_select()">送出</button>
+                        <div style="clear: both;"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        Copyright © 2017 憲光二村駐地工作站<br>
+        版權所有 | Design: CCW
+    </footer>
+    </body>
+</html>
