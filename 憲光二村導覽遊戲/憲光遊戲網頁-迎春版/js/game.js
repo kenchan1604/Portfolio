@@ -44,7 +44,7 @@ function check_select(n)
             break;
             case 10:
                 document.getElementById("indextitle").style.display = "none";
-                document.getElementById("s2box").innerHTML="<div class=\"kccenter\" id=\"kctitle\"><p>這時我們看見自治會長龔爺爺正在寫春聯，原來是過年快到了，他想先寫幾幅春聯貼在自治會門口，不過這幅春聯和平常看到了不太一樣，只有一堆數字，龔爺爺說這是元宵時要大家猜的燈謎，只要答對了，就可到崔媽媽家的雜貨店，換小禮物喔!<br><i class=\"fa fa-hand-o-right\"></i>請依照春聯給的線索，找到猜謎答案。</p><br><br><img src=\"./images/r4.png\" alt=\"第五關\"><br><br><div class=\"asnbox\">請輸入通關密語：<input type=\"text\" id=\"pwtext\" name=\"pwtext\"><div id=\"showtext\"></div><button id=\"next_btn\" onclick=\"check_select02(05)\">送出</button><button id=\"next_btn\" onclick=\"check_select(09)\">上一頁</button><div style=\"clear: both;\"></div>";
+                document.getElementById("s2box").innerHTML="<div class=\"kccenter\" id=\"kctitle\"><p>這時我們看見自治會長龔爺爺正在寫春聯，原來是過年快到了，他想先寫幾幅春聯貼在自治會門口，不過這幅春聯和平常看到了不太一樣，只有一堆數字，龔爺爺說這是元宵時要大家猜的歌名，只要答對了，就可到崔媽媽家的雜貨店，換小禮物喔!<br><i class=\"fa fa-hand-o-right\"></i>請依照春聯給的線索，找到答案。</p><br><br><img src=\"./images/r4.png\" alt=\"第五關\"><br><br><div class=\"asnbox\">請輸入通關密語：<input type=\"text\" id=\"pwtext\" name=\"pwtext\"><div id=\"showtext\"></div><button id=\"next_btn\" onclick=\"check_select02(05)\">送出</button><button id=\"next_btn\" onclick=\"check_select(09)\">上一頁</button><div style=\"clear: both;\"></div>";
             break;
             case 11:
                 document.getElementById("indextitle").style.display = "none";
